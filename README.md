@@ -30,20 +30,24 @@ npm install
 
 # build
 Stylus :
-```npm run build-stylus
+```
+npm run build-stylus
 ```
 
 JS :
-```npm run build-js
+```
+npm run build-js
 ```
 
 # watch
 Stylus :
-```npm run watch-stylus
+```
+npm run watch-stylus
 ```
 
 JS :
-```npm run watch-js
+```
+npm run watch-js
 ```
 
 

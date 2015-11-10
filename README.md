@@ -52,6 +52,6 @@ npm run watch-js
 
 HTML
 
-![alt tag](https://github.com/keuss/react-sandbox/Capture.PNG)
+![alt tag](https://raw.githubusercontent.com/keuss/react-sandbox/master/Capture.PNG)
 
 

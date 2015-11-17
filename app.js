@@ -30,10 +30,16 @@ var _Timer2 = _interopRequireDefault(_Timer);
 var HelloWorld = (function (_React$Component) {
   _inherits(HelloWorld, _React$Component);
 
-  function HelloWorld() {
+  function HelloWorld(props) {
     _classCallCheck(this, HelloWorld);
 
-    _get(Object.getPrototypeOf(HelloWorld.prototype), 'constructor', this).apply(this, arguments);
+    _get(Object.getPrototypeOf(HelloWorld.prototype), 'constructor', this).call(this, props);
+
+    this.state = {
+      isActive: false
+    };
+
+    this.onRadioChanged = this.onRadioChanged.bind(this);
   }
 
   _createClass(HelloWorld, [{
@@ -48,8 +54,40 @@ var HelloWorld = (function (_React$Component) {
           'Hello ',
           this.props.name
         ),
-        _react2['default'].createElement(_Timer2['default'], null)
+        _react2['default'].createElement(_Timer2['default'], null),
+        _react2['default'].createElement(
+          'label',
+          null,
+          'Afficher le texte ?'
+        ),
+        _react2['default'].createElement('input', { type: 'radio', name: 'radioType', value: 'yes', id: 'radioYes',
+          checked: this.state.isActive, onChange: this.onRadioChanged }),
+        _react2['default'].createElement(
+          'label',
+          { htmlFor: 'radioYes' },
+          'OUI'
+        ),
+        _react2['default'].createElement('input', { type: 'radio', name: 'radioType', value: 'no', id: 'radioNo',
+          checked: !this.state.isActive, onChange: this.onRadioChanged }),
+        _react2['default'].createElement(
+          'label',
+          { htmlFor: 'radioNo' },
+          'NON'
+        ),
+        this.state.isActive ? _react2['default'].createElement(
+          'p',
+          null,
+          'When the data changes, React conceptually hits the "refresh" button, and knows to only update the changed parts.'
+        ) : null
       );
+    }
+  }, {
+    key: 'onRadioChanged',
+    value: function onRadioChanged(e) {
+      console.log('onRadioChanged', e.target.value);
+      this.setState({
+        isActive: !this.state.isActive
+      });
     }
   }]);
 

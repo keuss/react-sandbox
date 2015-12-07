@@ -7,7 +7,8 @@
     "build-stylus": "stylus index.styl -c -u ./node_modules/autoprefixer-stylus -o app.css",
 	"watch-stylus": "stylus -w -m index.styl -u ./node_modules/autoprefixer-stylus -o app.css",
 	"watch-js": "watchify index.js -o app.js -v --debug",
-	"build-js": "browserify index.js -o app.js"
+	"build-js": "browserify index.js -o app.js",
+  "start": "python -m SimpleHTTPServer"
   },
   "browserify": {
     "transform": [

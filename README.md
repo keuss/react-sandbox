@@ -50,6 +50,11 @@ JS :
 npm run watch-js
 ```
 
+TEST HTTP (**need python for SimpleHTTPServer**) :
+```
+npm start
+```
+
 HTML
 
 ![alt tag](https://raw.githubusercontent.com/keuss/react-sandbox/master/Capture.PNG)
